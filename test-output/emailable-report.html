@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">CucumberPlaywrightSuite</th></tr>
+<tr><td><a href="#t0">CucumberScenarios</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">194,251</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">CucumberPlaywrightSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">CucumberScenarios &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.framework.runner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1755666903351</td><td rowspan="1">193280</td></tr></tbody>
+</table>
+<h2>CucumberScenarios</h2><h3 id="m0">com.framework.runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search OpenAI on Google&quot;</td><td>&quot;Google Search with Playwright&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\progress.js:78:26)
+    at Frame.fill (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\frames.js:1057:23)
+    at FrameDispatcher.fill (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\frameDispatcher.js:169:30)
+    at FrameDispatcher._handleCommand (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;input[name=&apos;q&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.PageImpl.lambda$fill$28(PageImpl.java:761)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.fill(PageImpl.java:760)
+	at com.microsoft.playwright.Page.fill(Page.java:4706)
+	at com.framework.pages.GoogleHomePage.search(GoogleHomePage.java:16)
+	at com.framework.stepdefinitions.GoogleSearchSteps.i_search_for(GoogleSearchSteps.java:29)
+	at ✽.I search for &quot;OpenAI&quot;(file:///E:/Project/Automation_Playwright/playwright-cucumber-testng-java/src/test/resources/features/googleSearch.feature:5)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\progress.js:78:26)
+    at Frame.fill (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\frames.js:1057:23)
+    at FrameDispatcher.fill (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\frameDispatcher.js:169:30)
+    at FrameDispatcher._handleCommand (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\17sub\AppData\Local\Temp\playwright-java-9692906908003088265\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;input[name=&apos;q&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.PageImpl.lambda$fill$28(PageImpl.java:761)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.PageImpl.fill(PageImpl.java:760)
+	at com.microsoft.playwright.Page.fill(Page.java:4706)
+	at com.framework.pages.GoogleHomePage.search(GoogleHomePage.java:16)
+	at com.framework.stepdefinitions.GoogleSearchSteps.i_search_for(GoogleSearchSteps.java:29)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
